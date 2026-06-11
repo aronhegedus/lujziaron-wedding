@@ -36,7 +36,7 @@ const translations = {
     navHome: "Kezdőlap",
     navQa: "Kérdések",
     weddingOf: "Szeretettel meghívunk az esküvőnkre",
-    brideName: "Daoud Maria Lujza",
+    brideName: "Daoud Mária Lujza",
     and: "és",
     groomName: "Hegedűs Áron Atilla",
     budapestHungary: "Budapest, Magyarország",
