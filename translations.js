@@ -18,13 +18,16 @@ const translations = {
     qaTitle: "Q + A",
     detailsLater: "We will add further details here as the day approaches.",
     dressCodeQuestion: "What is the dress code?",
-    dressCodeAnswer: "Dress-code details will be added shortly.",
+    dressCodeAnswer: "Formal.",
     guestQuestion: "Can I bring a guest?",
     guestAnswer: "Please let us know whether you require a plus one when you RSVP.",
     childrenQuestion: "Are children welcome?",
     childrenAnswer: "Yes. Please include their names and ages in your RSVP.",
     stayQuestion: "Where should I stay?",
     stayAnswer: "Accommodation recommendations will be added shortly.",
+    giftsQuestion: "What gifts can we bring?",
+    giftsAnswer:
+      "Our home already has its foundations, so if you would like to give a gift, we would warmly welcome any contribution that helps us bring our shared plans to life.",
     rsvpIntro: "Please let us know whether you will be able to join us.",
     formLink: "Link to RSVP form",
   },
@@ -47,44 +50,18 @@ const translations = {
     qaTitle: "Kérdések és válaszok",
     detailsLater: "A további részleteket az esküvő közeledtével tesszük közzé.",
     dressCodeQuestion: "Mi az öltözködési előírás?",
-    dressCodeAnswer: "Az öltözködéssel kapcsolatos részletek hamarosan elérhetők lesznek.",
+    dressCodeAnswer: "Formális.",
     guestQuestion: "Hozhatok magammal kísérőt?",
     guestAnswer: "Kérjük, a visszajelzés során jelezd, ha kísérővel érkezel.",
     childrenQuestion: "Szeretettel várjátok a gyerekeket is?",
     childrenAnswer: "Igen. Kérjük, a visszajelzésben add meg a nevüket és életkorukat.",
     stayQuestion: "Hol érdemes megszállni?",
     stayAnswer: "A szállásajánlásokat hamarosan közzétesszük.",
+    giftsQuestion: "Milyen ajándékkal készülhetünk?",
+    giftsAnswer:
+      "Otthonunk alapjai már megvannak, ezért ha ajándékkal készülnétek, örömmel fogadunk minden hozzájárulást, amely közös terveink megvalósítását segíti.",
     rsvpIntro: "Kérjük, jelezd, hogy velünk tudsz-e ünnepelni.",
     formLink: "Visszajelző űrlap",
-  },
-  ar: {
-    mainNavigation: "التنقل الرئيسي",
-    navHome: "الرئيسية",
-    navQa: "أسئلة وأجوبة",
-    weddingOf: "حفل زفاف",
-    brideName: "ماريا لوجا داود",
-    and: "و",
-    groomName: "آرون أتيلا هيغيدوش",
-    budapestHungary: "بودابست، المجر",
-    weddingDay: "يوم الزفاف",
-    ceremony: "مراسم الزواج",
-    basilica: "بازيليك القديس إسطفان",
-    dinnerDancing: "العشاء والرقص",
-    intercontinental: "فندق إنتركونتيننتال بودابست",
-    photoAlt: "لوجا وآرون معًا في بودابست",
-    helpfulInformation: "معلومات مفيدة",
-    qaTitle: "أسئلة وأجوبة",
-    detailsLater: "سنضيف المزيد من التفاصيل مع اقتراب موعد الزفاف.",
-    dressCodeQuestion: "ما هو الزي المناسب؟",
-    dressCodeAnswer: "ستتم إضافة تفاصيل الزي قريبًا.",
-    guestQuestion: "هل يمكنني اصطحاب مرافق؟",
-    guestAnswer: "يرجى إبلاغنا عند تأكيد الحضور إذا كنت بحاجة إلى اصطحاب مرافق.",
-    childrenQuestion: "هل الأطفال مرحب بهم؟",
-    childrenAnswer: "نعم. يرجى ذكر أسمائهم وأعمارهم عند تأكيد الحضور.",
-    stayQuestion: "أين يمكنني الإقامة؟",
-    stayAnswer: "سنضيف اقتراحات الإقامة قريبًا.",
-    rsvpIntro: "يرجى إبلاغنا إذا كنتم ستتمكنون من مشاركتنا الاحتفال.",
-    formLink: "رابط نموذج تأكيد الحضور",
   },
 };
 
@@ -103,10 +80,9 @@ rsvpFormLink.href = window.atob(formLinkParts.join(""));
 function setLanguage(language) {
   const selected = translations[language] ? language : "en";
   const strings = translations[selected];
-  const isArabic = selected === "ar";
 
   document.documentElement.lang = selected;
-  document.documentElement.dir = isArabic ? "rtl" : "ltr";
+  document.documentElement.dir = "ltr";
 
   document.querySelectorAll("[data-i18n]").forEach((element) => {
     element.textContent = strings[element.dataset.i18n];
