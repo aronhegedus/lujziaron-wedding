@@ -27,7 +27,7 @@ const translations = {
     stayAnswer: "Accommodation recommendations will be added shortly.",
     giftsQuestion: "What gifts can we bring?",
     giftsAnswer:
-      "Our home already has its foundations, so if you would like to give a gift, we would warmly welcome any contribution that helps us bring our shared plans to life.",
+      "Our home is already furnished with everything we need, so if you would like to give a gift, we would be grateful for any contribution toward our future plans together.",
     rsvpIntro: "Please let us know whether you will be able to join us.",
     formLink: "Link to RSVP form",
   },
